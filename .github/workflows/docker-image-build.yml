@@ -1,0 +1,51 @@
+name: Docker Image CI Build and push
+
+on:
+    push:
+        branches: [ "main" ]
+
+jobs:
+    docker:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            # 运行自定义命令(测试), 文件目录 /home/runner/work/fun-idea/fun-idea
+            # 使用 “|” 和文本内容缩进表示的块, 保留块中已有的回车换行。相当于段落块
+            - name: run custom command
+              run: |
+                  pwd
+                  ls -al
+
+            # - name: Build the Docker image
+            #   run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
+            - name: Set up QEMU
+              uses: docker/setup-qemu-action@v2
+
+            - name: Set up Docker Buildx
+              uses: docker/setup-buildx-action@v2
+
+            - name: Login to Docker Hub
+              uses: docker/login-action@v2
+              with:
+                  username: ${{ secrets.DOCKER_USERNAME }}
+                  password: ${{ secrets.DOCKER_PASSWORD }}
+
+            - name: Build and push [jre8]
+              uses: docker/build-push-action@v3
+              with:
+                  context: .
+                  file: ./Dockerfile0_ubuntu_jre8_latest
+                  push: true
+                  tags: ${{ secrets.DOCKER_USERNAME }}/base:ubuntu_jre8_latest
+
+            - name: Build and push [ojre17]
+              uses: docker/build-push-action@v3
+              with:
+                  context: .
+                  file: ./Dockerfile0_ubuntu_ojre17_latest
+                  push: true
+                  tags: ${{ secrets.DOCKER_USERNAME }}/base:ubuntu_ojre17_latest
