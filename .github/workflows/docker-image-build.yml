@@ -13,7 +13,6 @@ jobs:
               uses: actions/checkout@v3
 
             # 运行自定义命令(测试), 文件目录 /home/runner/work/docker-image-base/docker-image-base
-            # 使用 “|” 和文本内容缩进表示的块, 保留块中已有的回车换行。相当于段落块
             - name: run custom command
               run: |
                   pwd
@@ -49,3 +48,7 @@ jobs:
                   file: ./Dockerfile_ubuntu_ojre17_latest
                   push: true
                   tags: ${{ secrets.DOCKER_USERNAME }}/base:ubuntu_ojre17_latest
+
+            # 通知
+            - name: send notification
+              run: curl ${{ secrets.CHENCD97_SERVER }}/${{ secrets.DEVICE_CODE }}/GithubAction/Docker_base项目已更新
