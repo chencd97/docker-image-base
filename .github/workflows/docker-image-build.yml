@@ -38,7 +38,7 @@ jobs:
               uses: docker/build-push-action@v3
               with:
                   context: .
-                  file: ./Dockerfile0_ubuntu_jre8_latest
+                  file: ./Dockerfile_ubuntu_jre8_latest
                   push: true
                   tags: ${{ secrets.DOCKER_USERNAME }}/base:ubuntu_jre8_latest
 
@@ -46,6 +46,6 @@ jobs:
               uses: docker/build-push-action@v3
               with:
                   context: .
-                  file: ./Dockerfile0_ubuntu_ojre17_latest
+                  file: ./Dockerfile_ubuntu_ojre17_latest
                   push: true
                   tags: ${{ secrets.DOCKER_USERNAME }}/base:ubuntu_ojre17_latest
