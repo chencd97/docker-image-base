@@ -1,5 +1,5 @@
 ## Docker Hub
-https://hub.docker.com/repository/docker/chencd97/base
+https://hub.docker.com/r/chencd97/base
 
 ## 镜像内容
 
