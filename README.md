@@ -5,15 +5,13 @@ https://hub.docker.com/r/chencd97/base
 
 base中所有镜像的源都来自 `ubuntu:latest`
 
-目前只构建 `x64` 架构镜像
+目前只构建 `x86-64` 架构镜像
 
-无 `端口暴露`
+端口暴露 `无`
 
-无 `持久化目录`
+持久化目录 `无`
 
 ------
-
-
 
 ### Java jre 镜像
 
