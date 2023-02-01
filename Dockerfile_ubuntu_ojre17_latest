@@ -1,8 +1,8 @@
 FROM ubuntu:latest
 
-LABEL author = "chencd97"
-LABEL github = "https://github.com/chencd97"
-LABEL version = "1.0.1"
+LABEL author="chencd97"
+LABEL github="https://github.com/chencd97"
+LABEL version="1.0.1"
 
 # 安装jre
 ADD OpenJDK17U-jre_x64_linux_hotspot_17.0.6_10.tar.gz /usr/local

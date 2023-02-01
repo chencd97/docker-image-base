@@ -1,8 +1,8 @@
 FROM ubuntu:latest
 
-LABEL author = "chencd97"
-LABEL github = "https://github.com/chencd97"
-LABEL version = "1.0.0"
+LABEL author="chencd97"
+LABEL github="https://github.com/chencd97"
+LABEL version="1.0.0"
 
 # 安装jre
 ADD jre-8u202-linux-x64.tar.gz /usr/local
