@@ -16,7 +16,7 @@ base中所有镜像的源都来自 `ubuntu:latest`
 ### Java jre 镜像
 
 - `ubuntu_jre8_latest` -- [Oracle JDK](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html) - jre1.8.0_202
-- `ubuntu_ojre17_latest` -- [Adoptium OpenJDK](https://adoptium.net/) - [Eclipse Temurin™](https://adoptium.net/temurin/releases/) - jdk-17.0.6+10-jre
+- `ubuntu_ojre17_latest` -- [Adoptium OpenJDK](https://adoptium.net/) - [Eclipse Temurin™](https://adoptium.net/temurin/releases/) - jdk-17.0.7+7-jre
 
 镜像均已配置 `JRE_HOME`, `CLASSPATH` 以及系统 `PATH` 变量
 
