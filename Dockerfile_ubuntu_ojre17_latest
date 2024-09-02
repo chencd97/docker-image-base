@@ -2,12 +2,12 @@ FROM ubuntu:latest
 
 LABEL author="chencd97"
 LABEL github="https://github.com/chencd97"
-LABEL version="1.0.3"
+LABEL version="1.0.4"
 
 # 安装jre
-ADD OpenJDK17U-jre_x64_linux_hotspot_17.0.10_7.tar.gz /usr/local
+ADD OpenJDK17U-jre_x64_linux_hotspot_17.0.12_7.tar.gz /usr/local
 # 设置变量
-ENV JRE_HOME /usr/local/jdk-17.0.10+7-jre
+ENV JRE_HOME /usr/local/jdk-17.0.12+7-jre
 ENV CLASSPATH .
 ENV PATH $PATH:$JRE_HOME/bin
 
