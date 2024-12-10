@@ -1,0 +1,15 @@
+FROM ubuntu:latest
+
+LABEL author="chencd97"
+LABEL github="https://github.com/chencd97"
+LABEL version="1.0.0"
+
+# 安装jre
+ADD OpenJDK11U-jre_x64_linux_hotspot_11.0.25_9.tar.gz /usr/local
+# 设置变量
+ENV JRE_HOME /usr/local/jdk-11.0.25+9-jre
+ENV CLASSPATH .
+ENV PATH $PATH:$JRE_HOME/bin
+
+# 切换工作目录,进容器时的默认目录
+WORKDIR /home
