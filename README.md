@@ -32,7 +32,6 @@ From: [Adoptium OpenJDK](https://adoptium.net/) - [Eclipse Temurin™](https://a
 ```shell
 docker run \
        --rm \
-       -it \
        chencd97/base:[tag] \
        java -version
 ```
