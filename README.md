@@ -30,5 +30,9 @@ From: [Adoptium OpenJDK](https://adoptium.net/) - [Eclipse Temurin™](https://a
 您可以直接执行以下命令查看镜像 java 版本
 
 ```shell
-docker run --rm -it 镜像id java -version
+docker run \
+       --rm \
+       -it \
+       chencd97/base:[tag] \
+       java -version
 ```
