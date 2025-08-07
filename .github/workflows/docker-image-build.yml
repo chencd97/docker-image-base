@@ -6,6 +6,9 @@ on:
     # 允许随时手动运行作业
     workflow_dispatch:
 
+    schedule:
+        - cron: '10 10 * * 6'
+
 jobs:
     docker:
         runs-on: ubuntu-latest
