@@ -19,9 +19,9 @@ base中所有镜像的源都来自 `ubuntu:latest`
 
 From: [Oracle JDK](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html) - jre1.8.0_202
 
-- `ubuntu_ojre11`
-- `ubuntu_ojre21`
-- `ubuntu_ojre21`
+- ~~`ubuntu_ojre11`~~
+- ~~`ubuntu_ojre21`~~
+- ~~`ubuntu_ojre21`~~
 
 From: [Adoptium OpenJDK](https://adoptium.net/) - [Eclipse Temurin™](https://adoptium.net/temurin/releases/)
 

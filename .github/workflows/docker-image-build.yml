@@ -46,30 +46,6 @@ jobs:
                   push: true
                   tags: ${{ secrets.DOCKER_USERNAME }}/base:ubuntu_jre8u202
 
-            - name: Build and push [ojre17]
-              uses: docker/build-push-action@v6
-              with:
-                  context: .
-                  file: ./Dockerfile_ubuntu_ojre11
-                  push: true
-                  tags: ${{ secrets.DOCKER_USERNAME }}/base:ubuntu_ojre11
-
-            - name: Build and push [ojre17]
-              uses: docker/build-push-action@v6
-              with:
-                  context: .
-                  file: ./Dockerfile_ubuntu_ojre17
-                  push: true
-                  tags: ${{ secrets.DOCKER_USERNAME }}/base:ubuntu_ojre17
-
-            - name: Build and push [ojre21]
-              uses: docker/build-push-action@v6
-              with:
-                  context: .
-                  file: ./Dockerfile_ubuntu_ojre21
-                  push: true
-                  tags: ${{ secrets.DOCKER_USERNAME }}/base:ubuntu_ojre21
-
             # 通知
             - name: send notification
               run: curl ${{ secrets.BARK }}/GithubAction/Docker_base项目已更新
